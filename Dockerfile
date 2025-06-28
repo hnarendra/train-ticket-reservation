@@ -1,7 +1,7 @@
 FROM ubuntu AS build
 ENV DEBIAN_FROETNEND=noninteractive
 RUN apt update -y && apt install openjdk-17-jdk -y maven git
-RUN git branch: 'master', url: https://github.com/khaleel9876/train-ticket-reservation.git
+RUN git clone https://github.com/khaleel9876/train-ticket-reservation.git
 WORKDIR /train-ticket-reservation
 RUN mvn package
 
